@@ -63,14 +63,10 @@ extension HyperventilizationViewController: CAAnimationDelegate {
         let repeatCount = anim.repeatCount * 1.5
         print("repeatCount: \(repeatCount)")
 
-        if repeatCount > 10 {
+        if repeatCount > 30 {
             animate(fromValue: 0.2, duration: CGFloat(anim.duration), repeatCount: CGFloat(anim.repeatCount))
         } else {
-            if let currentScale = imageView.layer.presentation()?.value(forKey: "transform.scale") as? NSNumber {
-                animate(fromValue: CGFloat(currentScale.floatValue), duration: CGFloat(duration / 1.5), repeatCount: CGFloat(repeatCount))
-            } else {
-                animate(fromValue: 0.2, duration: CGFloat(duration / 1.5), repeatCount: CGFloat(repeatCount))
-            }
+            animate(fromValue: 0.2, duration: CGFloat(duration / 1.5), repeatCount: CGFloat(repeatCount))
         }
     }
 }
