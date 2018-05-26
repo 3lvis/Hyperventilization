@@ -11,6 +11,11 @@
 		446B7E1420B993A5005226BE /* HyperventilizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446B7E1320B993A5005226BE /* HyperventilizationViewController.swift */; };
 		446B7E1920B993A6005226BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446B7E1820B993A6005226BE /* Assets.xcassets */; };
 		446B7E1C20B993A6005226BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446B7E1A20B993A6005226BE /* LaunchScreen.storyboard */; };
+		447CF36220B9D21900C3822F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447CF36120B9D21900C3822F /* OnboardingViewController.swift */; };
+		447CF36420B9D8F300C3822F /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447CF36320B9D8F300C3822F /* DisclaimerViewController.swift */; };
+		447CF36820B9DB6C00C3822F /* Montez-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 447CF36520B9DB6C00C3822F /* Montez-Regular.ttf */; };
+		447CF36920B9DB6C00C3822F /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 447CF36620B9DB6C00C3822F /* Oswald-SemiBold.ttf */; };
+		447CF36A20B9DB6C00C3822F /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 447CF36720B9DB6C00C3822F /* Oswald-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		446B7E1820B993A6005226BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446B7E1B20B993A6005226BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446B7E1D20B993A6005226BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		447CF36120B9D21900C3822F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		447CF36320B9D8F300C3822F /* DisclaimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
+		447CF36520B9DB6C00C3822F /* Montez-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montez-Regular.ttf"; sourceTree = "<group>"; };
+		447CF36620B9DB6C00C3822F /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
+		447CF36720B9DB6C00C3822F /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				446B7E1120B993A5005226BE /* AppDelegate.swift */,
+				447CF36120B9D21900C3822F /* OnboardingViewController.swift */,
+				447CF36320B9D8F300C3822F /* DisclaimerViewController.swift */,
 				446B7E1320B993A5005226BE /* HyperventilizationViewController.swift */,
 				446B7E1820B993A6005226BE /* Assets.xcassets */,
 				446B7E1A20B993A6005226BE /* LaunchScreen.storyboard */,
+				447CF36520B9DB6C00C3822F /* Montez-Regular.ttf */,
+				447CF36720B9DB6C00C3822F /* Oswald-Regular.ttf */,
+				447CF36620B9DB6C00C3822F /* Oswald-SemiBold.ttf */,
 				446B7E1D20B993A6005226BE /* Info.plist */,
 			);
 			path = Hyperventilization;
@@ -119,8 +134,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447CF36A20B9DB6C00C3822F /* Oswald-Regular.ttf in Resources */,
 				446B7E1C20B993A6005226BE /* LaunchScreen.storyboard in Resources */,
+				447CF36920B9DB6C00C3822F /* Oswald-SemiBold.ttf in Resources */,
 				446B7E1920B993A6005226BE /* Assets.xcassets in Resources */,
+				447CF36820B9DB6C00C3822F /* Montez-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				446B7E1420B993A5005226BE /* HyperventilizationViewController.swift in Sources */,
+				447CF36420B9D8F300C3822F /* DisclaimerViewController.swift in Sources */,
+				447CF36220B9D21900C3822F /* OnboardingViewController.swift in Sources */,
 				446B7E1220B993A5005226BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

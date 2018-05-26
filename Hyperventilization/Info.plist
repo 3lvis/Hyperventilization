@@ -39,5 +39,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Oswald-SemiBold.ttf</string>
+		<string>Oswald-Regular.ttf</string>
+		<string>Montez-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

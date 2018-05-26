@@ -8,6 +8,10 @@ class HyperventilizationViewController: UIViewController {
         return view
     }()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -19,6 +23,7 @@ class HyperventilizationViewController: UIViewController {
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             ])
+
         animate(fromValue: 0.2, duration: 2, repeatCount: 2)
         rotate()
     }
