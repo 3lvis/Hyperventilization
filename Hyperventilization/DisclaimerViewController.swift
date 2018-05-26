@@ -55,7 +55,7 @@ class DisclaimerViewController: UIViewController {
             letsGoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             letsGoButton.heightAnchor.constraint(equalToConstant: 80),
             letsGoButton.widthAnchor.constraint(equalToConstant: 80),
-            letsGoButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            letsGoButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             ])
 
         letsGoButton.addTarget(self, action: #selector(goNext), for: .touchUpInside)

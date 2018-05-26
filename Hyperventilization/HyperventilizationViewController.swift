@@ -5,6 +5,7 @@ class HyperventilizationViewController: UIViewController {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "star2")
+        view.alpha = 0
         return view
     }()
 
@@ -15,6 +16,7 @@ class HyperventilizationViewController: UIViewController {
         label.textColor = UIColor(hex: "F9603A")
         label.text = "Breathe".uppercased()
         label.textAlignment = .center
+        label.alpha = 0
         return label
     }()
 
@@ -34,7 +36,7 @@ class HyperventilizationViewController: UIViewController {
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
-            instructionsLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
+            instructionsLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -60),
             instructionsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             instructionsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             ])
@@ -42,10 +44,18 @@ class HyperventilizationViewController: UIViewController {
         animate(fromValue: 0.2, duration: 2, repeatCount: 2)
         rotate()
 
-        perform(#selector(fadeLabel), with: nil, afterDelay: 3)
+        perform(#selector(fadeIn), with: nil, afterDelay: 0.5)
+        perform(#selector(fadeOut), with: nil, afterDelay: 3)
     }
 
-    @objc func fadeLabel() {
+    @objc func fadeIn() {
+        UIView.animate(withDuration: 0.5) {
+            self.imageView.alpha = 1
+            self.instructionsLabel.alpha = 1
+        }
+    }
+
+    @objc func fadeOut() {
         UIView.animate(withDuration: 0.4) {
             self.instructionsLabel.alpha = 0
         }

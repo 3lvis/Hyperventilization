@@ -52,7 +52,7 @@ class OnboardingViewController: UIViewController {
 
             moreInfoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             moreInfoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            moreInfoLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
+            moreInfoLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
             ])
 
         letsGoButton.addTarget(self, action: #selector(goNext), for: .touchUpInside)
