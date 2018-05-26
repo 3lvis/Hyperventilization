@@ -8,6 +8,16 @@ class HyperventilizationViewController: UIViewController {
         return view
     }()
 
+    lazy var instructionsLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont(name: "Oswald-SemiBold", size: 35)
+        label.textColor = UIColor(hex: "F9603A")
+        label.text = "Breathe".uppercased()
+        label.textAlignment = .center
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -16,16 +26,29 @@ class HyperventilizationViewController: UIViewController {
         super.viewDidAppear(animated)
 
         view.backgroundColor = .white
-        view.addSubview(self.imageView)
+        view.addSubview(imageView)
+        view.addSubview(instructionsLabel)
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalToConstant: 150),
             imageView.heightAnchor.constraint(equalToConstant: 150),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
+            instructionsLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
+            instructionsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            instructionsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             ])
 
         animate(fromValue: 0.2, duration: 2, repeatCount: 2)
         rotate()
+
+        perform(#selector(fadeLabel), with: nil, afterDelay: 3)
+    }
+
+    @objc func fadeLabel() {
+        UIView.animate(withDuration: 0.4) {
+            self.instructionsLabel.alpha = 0
+        }
     }
 
     var pulseAnimation: CABasicAnimation!
